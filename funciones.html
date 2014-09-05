@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Funciones</title>
+		 <script type="text/javascript" charset="utf-8">
+		      // function primera(){
+			//alert(8+5)
+		//};       
+		  //function primera(v1, v2){
+		//alert(v1+v2)
+	//};
+		function escribe(){
+			document.getElementById("pais").value="Hola Isaac"; 
+			document.getElementById("pais").focus();
+		};   
+		function borrar(){
+			document.getElementById("pais").value=""; 
+			
+		}; 
+		
+		function escribe_pais(){
+			document.getElementById("contiene_pais").innerHTML= document.getElementById("pais").value
+		};
+		 </script>  
+		<style type="text/css" media="screen">
+			#contiene_pais{
+				font-size:100px;
+				text-align:center;
+			}  
+		</style>
+	</head>
+	<body> 
+		<input type="text" name="pais" value="" id="pais">
+		
+		<input type="button" name="boton" value="Escribe Texto" id="boton" onClick="escribe();">  
+		
+		<input type="button" name="borrar" value="limpiar" id="borrar" onClick="borrar();"> 
+		
+		<input type="button" name="escribePais" value="escribePais" id="escribePais" onClick="escribe_pais();">  
+		
+		<div id="contiene_pais"></div> 
+		
+		<script type="text/javascript" charset="utf-8">
+			//primera(10,5);  
+			//escribe(); 
+		</script>
+		  
+	</body> 
+	
+</html>
