@@ -9,14 +9,14 @@ http://goo.gl/forms/w5BPnvjTSF
 * * *
 Liga repositorio de trabajo:
 -----------------------------------------------------------
-https://github.com/gustavoglz/tw1h14
+https://github.com/gustavoglz/tw1g14
 * * *
 Modulos a completar CodeAdademy
 -----------------------------------------------------------
-HTML & CSS
-Javascript
-jQuery
-PHP
+1. HTML & CSS
+2. Javascript
+3. jQuery
+4. PHP
 * * *
 Lista de Tareas:
 -----------------------------------------------------------
