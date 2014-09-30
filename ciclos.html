@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+<head> 
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<title>Ciclos</title> 
+	<style type="text/css" media="screen">
+		     .marca{
+			float:left;
+			width:150px;
+			height:40px;
+			line-height:40px;
+			text-align: center;
+			background:red;
+			color:white;
+			margin:5px;
+		}
+		.crece{
+			background:yellow;
+			font-size:50px;
+		}
+	</style>
+</head>
+<body>
+      
+
+<p id="modifica">Este parrafo se va a modificar</p>  
+<button onclick="myFunction()">Generar</button>
+
+<div id="demo"></div> 
+
+
+
+<script> 
+//function myFunction() {
+//    var text = "";
+//    var i = 1;
+//    while (i < 11) {
+//        text += "The number is " + i + "<br />";
+//        i++;
+//    }
+//} 
+
+function myFunction() {  
+	cars = ["BMW","Volvo","Saab","Ford","Chevrolet","Audi","Ferrari","Volkswagen","Mercedes", "Aston Martin","Bugatti"];
+	var i = 0;
+	var text = "";
+
+	while (cars[i]) {
+	    text += "<div class='marca'>" + cars[i] + "</div>";
+	    i++;
+	}
+    document.getElementById("demo").innerHTML = text;
+ };
+
+
+    $("#modifica").addClass("crece");
+
+</script>
+
+</body>
+</html>

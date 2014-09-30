@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Operaciones básicas</title>
+		<style type="text/css" media="screen">
+			body{
+				font-family: Arial, "MS Trebuchet", sans-serif;
+			}
+			.operacion{
+				width:25%;
+				min-height:200px;
+				float:left;
+				text-align: center;
+				padding-top:20px;
+			}
+			#suma, #multiplicacion{
+				background:#bdc3c7;
+			} 
+			.clear{
+				clear:both;
+			}
+			h1{
+				text-align: center;
+				
+			}
+			input[type=text]{
+				width:70px;
+				height:70px;
+				font-size:30px;
+				text-align: center;
+			} 
+			input[type=button]{
+				width:200px;
+				height:40px;
+				background:#cc0000;
+				border:none;
+				margin:20px 0;
+				font-size:20px;
+				color:white;
+			}
+			.resultado{
+				height:40px;
+				font-size:20px;
+				line-height:40px;
+			}
+			.operador{
+				font-size:30px;
+				line-height:70px;
+				margin:0 10px;
+			}
+		</style>
+		<script type="text/javascript" charset="utf-8">
+			function fsuma(){
+				document.getElementById("rsuma").innerHTML= parseFloat(document.getElementById("s1").value) + parseFloat(document.getElementById("s2").value);
+			};
+			function fresta(){
+				document.getElementById("rresta").innerHTML= parseFloat(document.getElementById("r1").value) - parseFloat(document.getElementById("r2").value);
+			};
+			function fmultiplica(){
+				document.getElementById("rmultiplica").innerHTML= parseFloat(document.getElementById("m1").value) * parseFloat(document.getElementById("m2").value);
+			};
+			function fdivide(){
+				var rdiv = parseFloat(document.getElementById("d1").value) / parseFloat(document.getElementById("d2").value);
+				document.getElementById("rdivide").innerHTML = Math.round(rdiv*100)/100;
+			};
+			function fborra(x){
+				if (x == 1){
+					document.getElementById("s1").value = "";
+					document.getElementById("s2").value = "";
+				} else if (x == 2){
+					document.getElementById("r1").value = "";
+					document.getElementById("r2").value = "";
+				} else if (x == 3){
+					document.getElementById("m1").value = "";
+					document.getElementById("m2").value = "";
+			    } else if (x == 4){
+				  	document.getElementById("d1").value = "";
+				  	document.getElementById("d2").value = "";
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Operaciones matemáticas</h1>
+		<div id="suma" class="operacion">
+			<input type="text" id="s1"></input>
+			<span class="operador"> + </span>
+			<input type="text" id="s2"></input>
+			<br />
+			<input type="button" value="Sumar" onclick="fsuma();"></input>
+			<input type="button" value="Borrar" onclick="fborra(1);"></input>
+			<br />
+			<div class="resultado" id="rsuma"> </div>
+		</div>
+		<div id="resta" class="operacion">
+			<input type="text" id="r1"></input>
+			<span class="operador"> - </span>
+			<input type="text" id="r2"></input>
+			<br />
+			<input type="button" value="Restar" onclick="fresta();"></input>
+			<input type="button" value="Borrar" onclick="fborra(2);"></input> 
+			<br />
+			<div class="resultado" id="rresta"> </div>
+		</div>
+		<div id="multiplicacion" class="operacion">
+			<input type="text" id="m1"></input>
+			<span class="operador"> * </span>
+			<input type="text" id="m2"></input>
+			<br />
+			<input type="button" value="Multiplicar" onclick="fmultiplica();"></input>
+			<input type="button" value="Borrar" onclick="fborra(3);"></input> 
+			<br />
+			<div class="resultado" id="rmultiplica"> </div>
+		</div>
+		<div id="division" class="operacion">
+			<input type="text" id="d1"></input>
+			<span class="operador"> / </span>
+			<input type="text" id="d2"></input>
+			<br />
+			<input type="button" value="Dividir" onclick="fdivide();"></input>
+			<input type="button" value="Borrar" onclick="fborra(4);"></input> 
+			<br />
+			<div class="resultado" id="rdivide"> </div>
+		</div>
+		<div class="clear"></div>
+	</body>
+</html> 
